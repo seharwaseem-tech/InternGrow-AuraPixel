@@ -4,12 +4,12 @@ This repository contains a simple photo gallery website. The website is made usi
 # Project Overview
 
 This project includes:
-Home Page – Welcome banner and simple buttons
-Gallery Page – Photos of Nature, Architecture, and Technology
-Photo Popup – Click any image to view it full screen with Next and Previous buttons
-About Us Page – Info about the project and developer
-Contact Us Page – Simple contact form and social media links
-Responsive Layout – Works well on all devices
+* Home Page – Welcome banner and simple buttons
+* Gallery Page – Photos of Nature, Architecture, and Technology
+* Photo Popup – Click any image to view it full screen with Next and Previous buttons
+* About Us Page – Info about the project and developer
+* Contact Us Page – Simple contact form and social media links
+* Responsive Layout – Works well on all devices
 
 # Technologies Used
 
