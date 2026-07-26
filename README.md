@@ -13,9 +13,9 @@ Responsive Layout – Works well on all devices
 
 # Technologies Used
 
-HTML5
-CSS3
-JavaScript
+* HTML5
+* CSS3
+* JavaScript
 
 # Purpose of This Project
 
