@@ -20,6 +20,7 @@ This project includes:
 # Purpose of This Project
 
 The purpose of this project is to practice:
+
 Making a simple multi-page website
 Creating image popups using JavaScript
 Designing clean layouts with CSS
@@ -28,4 +29,5 @@ Building mobile-friendly pages
 # Author
 
 Sehar Waseem
+
 Software Engineering Student
