@@ -1,0 +1,687 @@
+*{
+    margin: 0;
+    font-family: Arail;
+    border:border-box;
+}
+body{
+    background-color:gainsboro;
+}
+.navbar{
+    height: 60px;
+    background-color:rgb(0,0,0);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navLogo{
+    height: 50px;
+    width: 220px;
+
+}
+#logo{
+    height: 50px;
+    width: 100%;
+    background-image: url("images/AuraPixel logo.png");
+    background-size: cover;
+}
+.border{
+border:1px solid transparent;
+}
+.border:hover{
+border: 1px solid white;
+}
+
+.link{
+    margin-right:30px;
+}
+
+.link a{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    font-weight: 600;
+}
+
+/* Hero-Section */
+.hero-section{
+    background-image: url("images/AuraPixel Banner.png");
+    background-size: cover;
+    height: 600px;  
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    color: white;
+    background: rgba(0, 0, 0, 0.45); 
+    backdrop-filter: blur(1px);     
+    padding: 40px 60px;              
+    border-radius: 20px;        
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    max-width: 800px;  
+
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+.explore-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #4bb7cf; 
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 25px; 
+    transition: all 0.3px ease-in;
+}
+
+.explore-btn:hover{
+     transform: scale(1.07);
+     background-color: #389eb5;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #2a3644;
+    background-color: #131a22; 
+    font-size: 13px;
+    color: #999;
+}
+
+/* GALLERY FILE */
+
+
+#galleryTopLines{
+    margin: 40px;
+    color: #131a22;
+    font-size: large;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#Topline{
+    padding-top: 20px;
+    font-weight: 400;
+}
+
+.category-card{
+   display: inline-block;
+   margin-left: 130px;
+   margin-top: 10px;
+}
+
+.galleryTopBox{
+    width: 250px;
+    height: 320px;
+    border-radius: 12px;
+    transition: all 0.3s ease-in;
+} 
+
+.galleryTopBox:hover{
+    border-color: #4bb7cf;         
+    transform: translateY(-8px);      
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+   
+}
+
+#galleryTopBox1{
+    background-image: url("images/naturePic.jpg");
+    background-size: cover;
+}
+
+#galleryTopBox2{
+    background-image: url("images/ArchitecturePic.webp");
+    background-size: cover;
+}
+
+#galleryTopBox3{
+    background-image: url("images/techPic.jpg");
+    background-size: cover;
+}
+
+
+.category-btn{
+  text-decoration: none;
+  padding: 12px 30px;
+  background-color: #4bb7cf; 
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 25px; 
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: block;          
+  margin: 15px auto 0 auto;
+  width: max-content;
+  transition: all 0.3px ease-in;
+}
+
+.category-btn:hover{
+    transform: scale(1.07);
+    background-color: #389eb5;
+}
+
+
+/* ==========================================
+   PART 1: GALLERY SECTIONS & THUMBNAILS CSS
+   ========================================== */
+
+section {
+  padding: 40px 10%;
+}
+
+section h2 {
+  font-size: 28px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.gallery-container {
+  display: flex;             
+  flex-wrap: wrap;           
+  gap: 20px;                
+  justify-content: center;   
+}
+
+.clickable-img {
+  width: 250px;              
+  height: 200px;            
+  object-fit: cover;       
+  border-radius: 12px;      
+  cursor: pointer;         
+  transition: all 0.3s ease; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
+}
+
+.clickable-img:hover {
+  transform: scale(1.05);   
+  box-shadow: 0 10px 20px rgba(75, 183, 207, 0.3); 
+}
+
+/* ==========================================
+   PART 2: POPUP MODAL (HIDDEN OVERLAY) CSS
+   ========================================== */
+
+.modal {
+  display: none;             
+  position: fixed;           
+  z-index: 1000;         
+  left: 0;
+  top: 0;
+  width: 100%;            
+  height: 100%;        
+  overflow: auto;      
+  background-color: rgba(0, 0, 0, 0.9); 
+}
+
+.modal-content {
+  display: block;
+  margin: auto;          
+  max-width: 80%;         
+  max-height: 80vh;        
+  margin-top: 5%;        
+  border: 3px solid white; 
+  border-radius: 8px;
+  animation: zoomIn 0.3s ease; 
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 45px;
+  font-weight: bold;
+  cursor: pointer;        
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  color: #4bb7cf;      
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0); } 
+  to { transform: scale(1); }
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;                
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: white;
+  font-size: 30px;
+  border: none;
+  padding: 15px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  z-index: 1010;       
+}
+
+.prev-btn {
+  left: 20px;
+}
+
+.next-btn {
+  right: 20px;
+}
+
+.nav-btn:hover {
+  background-color: #4bb7cf; 
+  color: black;
+}
+
+/* ============================
+       ABOUT PAGE STYLES 
+   ============================ */
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px; 
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px; 
+}
+
+.about-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-text {
+  flex: 1; 
+}
+
+.about-text h2 {
+  font-size: 2.2rem;
+  color: #4bb7cf;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #000000; 
+  text-align: justify;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px; 
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); 
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: translateY(-5px); 
+}
+
+/* ============================
+       RESPONSIVE DESIGN
+   ============================ */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 40px 15px;
+    gap: 50px;
+  }
+
+  .about-section, 
+  .about-section.reverse {
+    flex-direction: column; 
+    text-align: center;
+    gap: 30px;
+  }
+
+  .about-text p {
+    text-align: center; 
+  }
+
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-image img {
+    max-width: 100%; 
+  }
+}
+
+/* =================================
+      CONTACT PAGE MAIN STYLES 
+   ================================= */
+
+.contact-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  box-sizing: border-box;
+}
+
+.contact-box {
+  flex: 1;
+}
+
+.form-box {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-box h2 {
+  color: #4bb7cf;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-size: 1rem;
+  color: #1a1a1a;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #333333;
+  box-sizing: border-box;
+  background-color: #fafafa;
+  font-family: inherit;
+}
+
+
+.input-group input:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: #4bb7cf;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(75, 183, 207, 0.3);
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: #4bb7cf;
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #3aa3bb;
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* RIGHT SIDE - Info Wrapper */
+.info-box {
+  padding: 20px 10px;
+  text-align: left;
+}
+
+.info-box h2 {
+  color: #4bb7cf;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.info-item {
+  margin-bottom: 25px;
+}
+
+.info-title {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #4bb7cf;
+  margin-bottom: 5px;
+}
+
+.info-item p {
+  font-size: 1.15rem;
+  color: #1a1a1a; 
+  margin: 0;
+}
+
+/* Social Buttons Alignment */
+.social-links {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.social-btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  border-radius: 6px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  text-align: center;
+}
+
+/* Branding Buttons Colors */
+.linkedin-btn {
+  background-color: #0077b5;
+}
+
+.github-btn {
+  background-color: #24292e;
+}
+
+.twitter-btn {
+  background-color: #0f1419; /* X / Twitter modern dark brand color */
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+/* ============================
+       RESPONSIVE DESIGN 
+   ============================ */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 40px;
+  }
+  
+  .form-box {
+    padding: 25px;
+  }
+  
+  .info-box {
+    text-align: center;
+    padding: 0;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+}
+
+
+/* =========================================================================
+   PERFECT GLOBAL RESPONSIVE STYLES (Fixes Logo & Nav Alignment)
+   ========================================================================= */
+
+@media (max-width: 768px) {
+  
+  /* 1. NAVBAR FIXES */
+  .navbar {
+    height: auto !important; 
+    flex-direction: column !important; 
+    padding: 20px 10px !important;
+    gap: 15px !important;
+  }
+
+  .navLogo {
+    width: 100% !important;
+    max-width: 200px; 
+    height: 45px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  #logo {
+    width: 100% !important;
+    height: 100% !important;
+    background-size: contain !important; 
+    background-position: center !important;
+  }
+
+  .navbar .link {
+    width: 100% !important;
+    text-align: center !important;
+    margin-right: 0 !important; 
+    margin: 6px 0 !important; 
+  }
+
+  .link a {
+    font-size: 16px !important;
+    display: inline-block !important;
+    padding: 5px 0 !important;
+  }
+  /* 2. HERO SECTION FIXES */
+  .hero-section {
+    height: 480px !important; 
+    padding: 0 15px !important;
+  }
+
+  .hero-content {
+    padding: 30px 15px !important;
+    width: 90% !important;
+    max-width: 100% !important;
+  }
+
+  .hero-content h1 {
+    font-size: 28px !important; 
+    margin-bottom: 12px !important;
+  }
+
+  .hero-content p {
+    font-size: 15px !important;
+    margin-bottom: 22px !important;
+  }
+
+  .explore-btn {
+    padding: 10px 22px !important;
+    font-size: 15px !important;
+  }
+
+  /* 3. FOOTER FIXES */
+  .footer-bottom {
+    padding: 15px 10px !important;
+    font-size: 12px !important;
+  }
+}
+
+
+/* =========================================================================
+          GALLERY TOP SECTION RESPONSIVE (Strictly For Mobile Only)
+   ========================================================================= */
+
+@media (max-width: 768px) {
+  
+  #galleryTopLines {
+    padding: 20px 10px !important;
+    text-align: center !important;
+  }
+
+  #galleryTopLines h1 {
+    font-size: 28px !important;
+  }
+
+  .category-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 90% !important; 
+    max-width: 320px !important;      
+    margin: 20px auto !important; 
+  }
+
+  .galleryTopBox {
+    width: 100% !important;
+    height: 180px !important; 
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  .category-btn {
+    width: 100% !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    padding: 10px 0 !important;
+  }
+
+} 

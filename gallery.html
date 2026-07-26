@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <header>
+        <nav class="navbar">
+            <!-- box1 -->
+                <div class="navLogo border">
+                    <div id="logo">
+                    </div>
+                </div>
+    
+                <div class="link border">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="link border">
+                    <a href="gallery.html" target="_blank">Explore Gallery</a>
+                </div>
+                <div class="link border">
+                    <a href="about.html" target="_blank">About Us</a>
+                </div>
+                <div class="link border">
+                    <a href="contact.html" target="_blank">Contact Us</a>
+                </div>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <div id="galleryTopLines">
+            <h1>AuraPixel Gallery</h1>
+            <p id="Topline"><big>Explore by Categories</big></p>
+        </div>
+
+             <!-- Nature Category Card Set -->
+        <div class="category-card">
+            <div class="galleryTopBox" id="galleryTopBox1"></div>
+            <a href="#nature-section" class="category-btn">Nature</a>
+        </div>
+            <!-- Architecture Category Card Set -->
+        <div class="category-card">
+            <div class="galleryTopBox" id="galleryTopBox2"></div>
+            <a href="#architecture-section" class="category-btn">Architecture</a>
+        </div>
+                <!-- Tech Category Card Set -->
+        <div class="category-card">
+            <div class="galleryTopBox" id="galleryTopBox3"></div>
+            <a href="#tech-section" class="category-btn">Technology</a>
+        </div>
+
+
+
+        <section id="nature-section">
+            <h2>Nature Collection</h2>
+            <div class="gallery-container">
+                <img src="images/Nature-image1.jpg" alt="Nature Landscape 1" class="clickable-img">
+                <img src="images/Nature-image2.jpg" alt="Nature Landscape 2" class="clickable-img">
+                <img src="images/Nature-image3.jpg" alt="Nature Landscape 3" class="clickable-img">
+                <img src="images/Nature-image4.jpg" alt="Nature Landscape 4" class="clickable-img">
+                <img src="images/Nature-image5.jpg" alt="Nature Landscape 5" class="clickable-img">
+                <img src="images/Nature-image6.jpg" alt="Nature Landscape 6" class="clickable-img">
+            </div>
+
+        </section>
+
+        <section id="architecture-section">
+            <h2>Architecture Masterpieces</h2>
+            <div class="gallery-container">
+                <img src="images/architecture-image1.jpg" alt="architecture-image1" class="clickable-img">
+                <img src="images/architecture-image2.jpg" alt="architecture-image2" class="clickable-img">
+                <img src="images/architecture-image3.jpg" alt="architecture-image3" class="clickable-img">
+                <img src="images/architecture-image4.jpg" alt="architecture-image4" class="clickable-img">
+                <img src="images/architecture-image5.jpg" alt="architecture-image5" class="clickable-img">
+                <img src="images/architecture-image6.jpg" alt="architecture-image6" class="clickable-img">
+            </div>
+
+        </section>
+
+        <section id="tech-section">
+            <h2>Futuristic Technology</h2>
+            <div class="gallery-container">
+                <img src="images/tech-image1.jpg" alt="tech-image1" class="clickable-img">
+                <img src="images/tech-image2.jpg" alt="tech-image2" class="clickable-img">
+                <img src="images/tech-image3.jpg" alt="tech-image3" class="clickable-img">
+                <img src="images/tech-image4.png" alt="tech-image4" class="clickable-img">
+                <img src="images/tech-image5.jpg" alt="tech-image5" class="clickable-img">
+                <img src="images/tech-image6.jpg" alt="tech-image6" class="clickable-img">
+            </div>
+
+        </section>
+
+        <div id="imageModal" class="modal">
+            <span class="close-btn">&times;</span>
+            <button class="nav-btn prev-btn">&#10094;</button>
+            <img class="modal-content" id="img01" src="" alt="Big Image">
+            <button class="nav-btn next-btn">&#10095;</button>
+        </div>
+
+
+    </main>
+
+
+     <footer>
+    <div class="footer-bottom">
+        <p>&copy; 2026 AuraPixel. Made with &hearts; by Sehar Waseem.</p>
+    </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
